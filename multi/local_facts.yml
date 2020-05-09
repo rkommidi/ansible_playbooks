@@ -1,0 +1,18 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: "Create custom fact directory"
+       file:
+         path: "/tmp/ansible/facts.d"
+         state: "directory"
+
+     - name: "Insert custom fact file"
+       copy:
+         src: custom.fact
+         dest: /tmp/ansible/facts.d/custom.fact
+         mode: 0755
+
+     - setup: fact_path=/tmp/ansible/facts.d
+       

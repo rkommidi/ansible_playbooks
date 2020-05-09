@@ -1,0 +1,12 @@
+vagrant box add geerlingguy/centos7
+vagrant init geerlingguy/centos7
+vagrant up
+
+#To Shutdown
+vagrant halt 
+
+#To delete Completly
+vagrant destory
+
+#To connect
+Vagrant ssh

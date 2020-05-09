@@ -1,0 +1,2 @@
+ansible -i hosts multi -a "hostname"
+ansible multi -b -m yum -a "name=ntp state=present"
